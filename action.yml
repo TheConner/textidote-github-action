@@ -1,0 +1,17 @@
+name: 'Textidote Action'
+description: 'Runs textidote against a latex entrypoint'
+inputs:
+  latex-file:
+    description: 'LaTeX file to run against'
+    required: true
+  language:
+    description: 'Language to spellcheck against'
+    required: false
+outputs:
+  time: # id of output
+    description: 'The time we greeted you'
+runs:
+  using: 'docker'
+  image: 'Containerfile'
+  args:
+    - ${{ inputs.latex-file }}
