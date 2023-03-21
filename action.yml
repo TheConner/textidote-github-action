@@ -7,11 +7,9 @@ inputs:
   language:
     description: 'Language to spellcheck against'
     required: false
-outputs:
-  time: # id of output
-    description: 'The time we greeted you'
 runs:
   using: 'docker'
-  image: 'Dockerfile'
+  image: 'ghcr.io/TheConner/textidote-github-action:main'
   args:
+    - --ci
     - ${{ inputs.latex-file }}
