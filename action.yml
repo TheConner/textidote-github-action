@@ -12,5 +12,6 @@ runs:
   image: 'docker://ghcr.io/theconner/textidote-github-action:main'
   args:
     - --ci
-    - --output workflow
+    - --output
+    -- workflow
     - ${{ inputs.latex-file }}
