@@ -13,5 +13,5 @@ runs:
   args:
     - --ci
     - --output
-    -- workflow
+    - workflow
     - ${{ inputs.latex-file }}
