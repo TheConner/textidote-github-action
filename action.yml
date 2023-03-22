@@ -9,7 +9,7 @@ inputs:
     required: false
 runs:
   using: 'docker'
-  image: 'docker://ghcr.io/TheConner/textidote-github-action:main'
+  image: 'docker://ghcr.io/theconner/textidote-github-action:main'
   args:
     - --ci
     - ${{ inputs.latex-file }}
