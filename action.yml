@@ -6,7 +6,8 @@ inputs:
     required: true
   language:
     description: 'Language to spellcheck against'
-    required: false
+    required: true
+    default: 'en'
 runs:
   using: 'docker'
   image: 'docker://ghcr.io/theconner/textidote-github-action:main'
@@ -14,4 +15,6 @@ runs:
     - --ci
     - --output
     - workflow
+    - --check
+    - ${{ inputs.language }}
     - ${{ inputs.latex-file }}
