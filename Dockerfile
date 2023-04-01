@@ -40,7 +40,7 @@ FROM registry.access.redhat.com/ubi9-micro:latest
 COPY --from=build /textidote/textidote-0.9.jar /textidote.jar
 COPY --from=build /javaruntime /jre
 
-WORKDIR /latex
+WORKDIR /github/workspace
 ENTRYPOINT ["/jre/bin/java", "-jar", "/textidote.jar"]
 
 # Size comparison: 

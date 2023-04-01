@@ -12,6 +12,7 @@ runs:
   using: 'docker'
   image: 'docker://ghcr.io/theconner/textidote-github-action:main'
   args:
+    - --quiet
     - --ci
     - --output
     - workflow
